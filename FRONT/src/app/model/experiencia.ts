@@ -7,4 +7,6 @@ export class Experiencia {
 this.nombreE = nombreE;
 this.descripcionE = descripcionE;
     }
-}
+
+    }
+

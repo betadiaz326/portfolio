@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.portfolio.betania.Security.Entity;
 
 import com.portfolio.betania.Security.Enums.RolNombre;
@@ -14,10 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-/**
- *
- * @author 54354
- */
+
 @Entity
 public class Rol {
     @Id

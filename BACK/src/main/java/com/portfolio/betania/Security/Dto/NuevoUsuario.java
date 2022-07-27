@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.portfolio.betania.Security.Dto;
 
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author 54354
- */
+
 public class NuevoUsuario {
    private String nombre;
    private String nombreUsuario;
@@ -38,7 +31,7 @@ public class NuevoUsuario {
     }
 
     public String getEmail() {
-        return email;
+        return email; 
     }
 
     public void setEmail(String email) {

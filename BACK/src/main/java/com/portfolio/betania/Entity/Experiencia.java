@@ -14,7 +14,7 @@ public class Experiencia {
   private String nombreE;
   private String descripcionE;
   
-  //Constructor
+  //Constructores
 
     public Experiencia() {
     }
@@ -50,3 +50,4 @@ public class Experiencia {
     }
     
 }
+ 

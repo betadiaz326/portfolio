@@ -3,7 +3,7 @@ import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
 
-@Component({
+@Component({  
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
   styleUrls: ['./experiencia.component.css']
@@ -25,5 +25,16 @@ expe:Experiencia[] = [];
   }
     cargarExperiencia():void{
       this.sExperiencia.lista().subscribe(data => {this.expe = data;})
+    }
+delete(id?: number){
+      if(id != undefined){
+        this.sExperiencia.delete(id).subscribe(
+          data=> {
+            this.cargarExperiencia();
+          }, err => {
+            alert("No se pudo borrar la experiencia");
+          }
+        )
+          }
     }
 }
