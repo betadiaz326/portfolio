@@ -10,6 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 export class AuthService {
 authURL = 'http://localhost:8080/auth/';
+  parcero: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,5 +21,8 @@ authURL = 'http://localhost:8080/auth/';
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
    
     return  this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario)
+  }
+  loggedIn() {
+    return this.parcero;
   }
 }
