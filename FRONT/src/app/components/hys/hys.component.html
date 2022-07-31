@@ -1,8 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+      <h2 class="text-center"><img src="https://i.postimg.cc/Nj88BW8s/infography.gif" alt="experiencia laboral" height="auto" width="80"/></h2>        
+      <h6 class="text-center">Hard & Soft</h6>
+      <h2 class="text-center fw-bold text-uppercase mb-4">Hys</h2>
+
+
+      <div class="col-12 text-center">
+          <button type="button" class="btn btn-dark add-button" routerLink="/nuevahys/" *ngIf="isLogged"><i class="bi bi-plus-lg"></i>
+          </button>
+      </div>
+  </div>
+
+  <div class="row" >  
+      <div class="col-lg-10 offset-lg-1"  *ngFor="let Hys of hy">
+          <div class="container">            
+                  <div class="row d-flex align-items-end">
+                      <div class="col-12 col-md-10 name-hys">
+                          <h5 class="fw-bold">{{Hys.nombreH}}</h5>
+                          <div class="progress">                                
+                              <div class="progress-bar" role="progressbar">
+                                  <h5>{{Hys.porcentajeH}}%</h5>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-2 buttons-col text-end mt-2 mt-md-auto" *ngIf="isLogged">
+                          <button class="btn btn-light edit-button m-1" routerLink="/edithys/{{Hys.id}}">
+                              Editar</button>
+                          <button class="btn btn-danger delete-button m-1" (click)="delete(Hys.id)">
+                              <i class="bi bi-trash-fill"></i>
+                          </button>
+                      </div> 
+                  </div>
+          </div>
+      </div>
+  </div>
+
+
+
+ <!--<div class="container-fluid">
 <div class="row">
+  <h1>Hard & Soft Skill</h1>
+  <div class="col-lg-2">
+      <button type="button" class="btn btn-dark" routerLink="/nuevahys" *ngIf="isLogged">
+          Agregar 'Habilidad'
+      </button>
+  </div>
+</div>
+
+<div class="row" *ngFor="let Hys of hys">   
+  <div class="progress"   style="height: 30px;" >
+      <div class="progress-bar" style="width: {{Hys.porcentajeH}}%" role="progressbar" > <h2>{{Hys.nombreH}} - {{Hys.porcentajeH}}%</h2></div>
+    </div>
+    <td *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/edithys/{{Hys.id}}">
+          <i class="bi bi-pencil-fill"></i> EDITAR</button>
+  </td>
+  <td *ngIf="isLogged">
+      <button class="btn btn-danger" (click)="delete(Hys.id)">
+          <i class="bi bi-trash-fill"></i> BORRAR</button>
+  </td>  
+</div>
+
+
+<div class="row" >
+  
+  <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Hys of hys">
+      <circle-progress
+          
+          [percent]="50"
+          [radius]="90"
+                     
+          [showImage]="true"
+          [imageHeight]="70"
+          [imageWidth]="70"
+          [showUnits]="false"
+          [showSubtitle]="false"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="2"
+          [outerStrokeColor]= " 'pink' " 
+          [innerStrokeColor]=" 'black' " 
+          [animation]="true"
+          [animationDuration]="600"
+          
+      ></circle-progress>
+  </div>
+  
+</div>
+</div> -->
+<!--<div class="row">
     <h1>Hard & skills</h1>
     <div class="text-center col-sm-4 col-md4 col-lg-4">
     <circle-progress 
-    [percent]= " 85 " 
+    [percent]= " 50 " 
     [radius]= " 100 " 
     [imageSrc]="'../assets/img/html.jpg'"
     [showImage]="true"
@@ -108,4 +198,4 @@
     [animationDuration]="600" 
   ></circle-progress >
 </div>
-</div>
+</div> -->

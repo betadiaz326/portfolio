@@ -1,14 +1,24 @@
 <div class="row">
-    <h1>Proyectos realizados</h1>
-<div class="contenedor">
-    <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-        <h1>proyecto 1</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere hic at quaerat id distinctio natus? Nemo mollitia consequuntur vel aspernatur, animi pariatur qui repellat inventore minus voluptates ex veniam odio.</p>
-</div>
-<div class="col-sm-12 col-md-3 col-lg-3 offset-md-1  offset-lg-1 parte2">
-    <img src="../../../assets/img/proyecto.jpg"
-    class="img-fluid img-proyecto">
-        </div>
+    <h1>Proyectos Realizados</h1>
 
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaproy/" *ngIf="isLogged">
+          Nuevo Proyecto
+    </button>
 </div>
+
+    <div class="col-lg 1"></div>
+   <div class="col-lg-11">
+    <table class="table">
+        <tbody>
+            <tr *ngFor="let Proyectos of proy">
+                <td><h2>{{Proyectos.nombreP}}</h2></td>
+                <td>{{Proyectos.descripcionP}}</td>
+                <td *ngIf="isLogged"><button class="btn btn-light" routerLink="/editproy/{{Proyectos.id}}"> <i class="bi bi-pencil-fill"></i>EDITAR</button></td>
+                <td *ngIf="isLogged"><button class="btn btn-danger"(click)="delete(Proyectos.id)"> <i class="bi bi-trash-fill"></i>BORRAR</button></td>
+            </tr>
+        </tbody>
+     </table>
+   </div>
+ 
 </div>

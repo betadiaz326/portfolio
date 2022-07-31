@@ -9,7 +9,6 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { LogoApComponent } from './components/logo-ap/logo-ap.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,13 +21,19 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
-
+import { LogoApComponent } from './components/logo-ap/logo-ap.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
+import { EditProyectosComponent } from './components/proyecto/edit-proyecto.component';
+import { EdithysComponent } from './components/hys/edithys.component';
+import { NewHysComponent } from './components/hys/new-hys.component';
+         
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LogoAPComponent,
+    LogoApComponent,
     BannerComponent,
+
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
@@ -36,11 +41,16 @@ import { HysComponent } from './components/hys/hys.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+
     NewExperienciaComponent,
     EditExperienciaComponent,
     NewEducacionComponent,
     EditEducacionComponent,
     HysComponent,
+    NewProyectoComponent,
+    EditProyectosComponent,
+    NewHysComponent,
+    EdithysComponent,
   ],
   imports: [
     BrowserModule,
