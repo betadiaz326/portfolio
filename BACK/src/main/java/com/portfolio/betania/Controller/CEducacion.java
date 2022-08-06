@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("educ")
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/educ")
+@CrossOrigin(origins = "https://argentinaprogramback.herokuapp.com/educ")
 public class CEducacion {
   @Autowired
   SEducacion sEducacion;  
@@ -40,8 +40,8 @@ public class CEducacion {
     public ResponseEntity<Educacion> getById(@PathVariable("id") int id){
         if(!sEducacion.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        Educacion experiencia = sEducacion.getOne(id).get();
-        return new ResponseEntity(experiencia, HttpStatus.OK);
+        Educacion educacion = sEducacion.getOne(id).get();
+        return new ResponseEntity(educacion, HttpStatus.OK);
     }
      @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {

@@ -7,7 +7,7 @@ import { Hys } from '../model/hys';
   providedIn: 'root'
 })
 export class SHysService {
-  hysURL = 'http://localhost:8080/hys/';
+  hysURL = 'https://argentinaprogramback.herokuapp.com/hys/';
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<Hys[]> {
